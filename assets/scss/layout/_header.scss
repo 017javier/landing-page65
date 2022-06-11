@@ -112,6 +112,7 @@
             cursor: pointer;
         }
         &__nav-toggle[aria-expanded="true"] {
+            position: fixed;
             background-image: url(../img/icon-close.svg);
             cursor: pointer;
         }
