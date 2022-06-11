@@ -1,0 +1,162 @@
+// header
+
+.header{
+    background-image: url('../img/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:multiply;
+    padding: 65px var(--px);
+    margin-bottom: var(--mb);
+
+    &__nav{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    &__navegation{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(min-content, min-content));
+        grid-gap: 32px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__nav-toggle{
+        display: none;
+    }
+    &__li{
+        position: relative;
+    }
+    &__li::after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        transform: translateX(-50%);
+        background: var(--white);
+    }
+    &__li:hover::after{
+        width: 100%;
+    }
+    &__a{
+        text-decoration: none;
+        color: var(--white);
+        font-size: 2rem;
+    }
+    &__toggle{
+        display: none;
+    }
+    &__h1{
+        max-width: 650px;
+        padding: 38px;
+        margin-bottom: 80px;
+        border: 3px solid var(--white);
+        font-size: var(--fs-h1);
+        color: var(--white);
+    }
+}
+@media screen and (max-width: 992px) {
+    .header{
+        &__brand{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            left: 30px;
+            top: 40px;
+        }
+        &__brand img{
+            max-width: 145px;
+        }
+        &__navegation{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            margin: 0;
+            padding: 60px 20px ;
+            inset: 0 0 0 0%;
+            list-style: none;
+            background-color: hsl(var(--white) / 0.05);
+            backdrop-filter: blur(8rem);
+            transform: translateX(100%);
+            transition: transform 500ms ease-in-out;
+            z-index: 1000;
+        }
+
+        &__navegation[data-visible="true"] {
+            transform: translateX(0);
+        }
+        &__nav-toggle{
+            position: fixed;
+            display: block;
+            background-color: var(--purple-dark-opacity);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            z-index: 2000;
+            right: 30px;
+            top: 40px;
+            
+            background-image: url(../img/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            aspect-ratio: 1;
+            border: 0;
+            cursor: pointer;
+        }
+        &__nav-toggle[aria-expanded="true"] {
+            background-image: url(../img/icon-close.svg);
+            cursor: pointer;
+        }
+        
+        &__nav-toggle:focus-visible{
+            outline: 5px solid white;
+            outline-offset: 5px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root{
+        --fs-h1: 5em;
+        --fs-h2: 3.8em;
+        
+        /* spacing */
+        --px: 40px; /* padding left & padding rigth */
+        --mb: 120px; /* margin botton */
+    }
+    .header{
+        &__h1{
+            padding: 22px;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    :root{
+        --fs-h1: 5em;
+        --fs-h2: 2.7em;
+        --fs-h3: 1.6em;
+        
+        /* spacing */
+        --px: 25px; /* padding left & padding rigth */
+        --mb: 100px; /* margin botton */
+    }
+    .header{
+        background: url('../img/mobile/image-hero.jpg') no-repeat center;
+        background-size: cover;
+        padding: 45px var(--px);
+
+        &__h1{
+            margin-top: 170px;
+            margin-bottom: 175px;
+        }
+    }
+}

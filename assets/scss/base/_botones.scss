@@ -1,0 +1,32 @@
+
+.product__btn{
+    position: absolute;
+    right: var(--px);
+    top: 5px;
+    padding: 8px 35px;
+    letter-spacing: 5px;
+    border: 1px solid var(--black);
+    color: var(--black);
+
+    &:hover{
+        color: var(--white);
+        background-color: var(--black);
+    }
+}
+
+@media screen and (max-width: 992px){
+    .product__btn{
+        position: static;
+        display: block;
+        width: max-content;
+        margin: auto;
+        margin-top: 80px;
+    
+    }
+}
+@media screen and (max-width: 576px){
+    .product__btn{
+        margin-top: 35px;
+    }
+
+}

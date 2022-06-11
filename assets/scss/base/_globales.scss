@@ -1,0 +1,44 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: var(--ff-josefin-sans);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: hsl(287, 52%, 55%);
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color:var(--white);
+        border-radius: 5rem;
+    }
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+}
+h1,h2,h3{
+    font-weight:300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.contenedor{
+    max-width: 1440px;
+    margin: auto;
+    background: var(--white);
+}

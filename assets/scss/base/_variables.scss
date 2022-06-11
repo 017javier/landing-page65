@@ -1,0 +1,23 @@
+:root{
+
+    /* color */
+    --very-dark-gray: hsl(0, 0%, 41%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --purple: hsl(229, 93%, 57%);
+    --purple-dark:hsl(260, 88%, 20%);
+    --purple-dark-opacity:hsla(258, 88%, 20%, 0.5);;
+
+    /* tipography */
+    --ff-josefin-sans: "Josefin Sand", sans-serif;
+    --fs-h1: 7.5em;
+    --fs-h2: 4.2em;
+    --fs-h3: 3.1em;
+    --fs-regular: 1.6rem;
+    --fs-300: 300;
+
+    /* spacing */
+    --px: 165px; /* padding left & padding rigth */
+    --mb: 180px; /* margin botton */
+}

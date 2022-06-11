@@ -1,0 +1,11 @@
+{
+  "name": "landing65",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/styles.scss ./assets/css/styles.css"
+  },
+  "author": "javier tovar",
+  "license": "ISC"
+}
